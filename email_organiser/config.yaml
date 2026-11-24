@@ -1,0 +1,33 @@
+name: Personal Email Organiser
+version: 1.1.2
+slug: email_organiser
+description: Gmail and Yahoo local organiser; opt-in safe and balanced folder automation
+arch:
+  - aarch64
+image: ghcr.io/juliuspollak/email-organiser
+startup: application
+boot: auto
+init: false
+map:
+  - type: app_config
+    read_only: false
+options:
+  mode: dry_run
+  enable_actions: false
+  expanded_actions_enabled: false
+  trash_old_delivery_updates: false
+  enable_unsubscribe: false
+  max_actions_per_run: 10
+  interval_minutes: 30
+  history_days: 30
+  max_per_account: 150
+schema:
+  mode: list(dry_run|safe|balanced)
+  enable_actions: bool
+  expanded_actions_enabled: bool
+  trash_old_delivery_updates: bool
+  enable_unsubscribe: bool
+  max_actions_per_run: int(0,50)
+  interval_minutes: int(15,1440)
+  history_days: int(1,90)
+  max_per_account: int(1,200)
