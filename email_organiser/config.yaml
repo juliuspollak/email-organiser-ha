@@ -26,7 +26,7 @@ schema:
   mode: list(dry_run|safe|balanced)
   enable_actions: bool
   expanded_actions_enabled: bool
-  auto_file_marketing: bool
+  auto_file_marketing: bool?
   trash_old_delivery_updates: bool
   enable_unsubscribe: bool
   max_actions_per_run: int(0,50)
