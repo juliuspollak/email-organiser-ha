@@ -1,5 +1,5 @@
 name: Personal Email Organiser
-version: 1.1.4
+version: 1.2.0
 slug: email_organiser
 description: Gmail and Yahoo local organiser; opt-in safe and balanced folder automation
 arch:
@@ -16,6 +16,7 @@ options:
   enable_actions: false
   expanded_actions_enabled: false
   auto_file_marketing: false
+  bulk_backlog_enabled: false
   trash_old_delivery_updates: false
   enable_unsubscribe: false
   max_actions_per_run: 10
@@ -27,9 +28,10 @@ schema:
   enable_actions: bool
   expanded_actions_enabled: bool
   auto_file_marketing: bool?
+  bulk_backlog_enabled: bool?
   trash_old_delivery_updates: bool
   enable_unsubscribe: bool
   max_actions_per_run: int(0,50)
   interval_minutes: int(15,1440)
-  history_days: int(1,90)
-  max_per_account: int(1,200)
+  history_days: int(1,3650)
+  max_per_account: int(1,500)
